@@ -1,0 +1,10 @@
+{
+  "languageserver": {
+    "elixir": {
+      "command": "elixir-ls",
+      "filetypes": ["elixir", "eelixir", "heex"],
+      "rootPatterns": ["mix.exs"]
+    }
+  },
+   "coc.preferences.formatOnSaveFiletypes": ["elixir", "eelixir", "heex"]
+}
