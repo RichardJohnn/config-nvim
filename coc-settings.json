@@ -6,5 +6,6 @@
       "rootPatterns": ["mix.exs"]
     }
   },
-   "coc.preferences.formatOnSaveFiletypes": ["elixir", "eelixir", "heex"]
+   "coc.preferences.formatOnSaveFiletypes": ["elixir", "eelixir", "heex"],
+   "elixir.pathToElixirLS": "~/.elixir-ls/release/language_server.sh"
 }
