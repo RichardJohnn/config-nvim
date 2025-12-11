@@ -35,8 +35,15 @@ Plug 'terryma/vim-expand-region'
 Plug 'MunifTanjim/nui.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'nosduco/remote-sshfs.nvim'
+
+Plug 'github/copilot.vim'
+Plug 'CopilotC-Nvim/CopilotChat.nvim'
+" let g:copilot_node_command = "/Users/richardkubina/.asdf/shims/node"
 
 call plug#end()
+
+let g:copilot_npx = v:true
 
 set mouse=r
 
@@ -255,3 +262,26 @@ cmap w!! w !sudo tee > /dev/null %
 " lua require('chatgpt').setup()
 lua require'nvim-treesitter.configs'.setup{highlight={enable=true}}  
 
+runtime macros/matchit.vim
+
+lua << EOF
+require('remote-sshfs').setup({
+  -- Configuration options here
+  -- or leave empty for defaults
+})
+
+vim.g.copilot_no_tab_map = true
+vim.keymap.set('i', '<S-Tab>', 'copilot#Accept("\\<S-Tab>")', { expr = true, replace_keycodes = false })
+
+require("CopilotChat").setup()
+
+-- Quick chat keybinding
+vim.keymap.set('n', '<leader>ccq', function()
+  local input = vim.fn.input("Quick Chat: ")
+  if input ~= "" then
+    require("CopilotChat").ask(input, {
+      selection = require("CopilotChat.select").buffer
+    })
+  end
+end, { desc = "CopilotChat - Quick chat" })
+EOF
