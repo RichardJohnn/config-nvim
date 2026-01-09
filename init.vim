@@ -178,7 +178,7 @@ endfunction
 autocmd VimEnter * NERDTreeToggle | NERDTreeToggle | wincmd p
 
 "colors
-colorscheme lodestone
+colorscheme slate
 
 "{
   "yank_register = "+",
