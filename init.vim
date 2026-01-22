@@ -112,6 +112,9 @@ nnoremap <Leader>q :bp\|bd #<CR>
 " search replace word under cursor
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
 
+" copy file:linenumber to clipboard
+nnoremap <leader>c :let @+ = expand("%") . ":" . line(".")<CR>
+
 nnoremap <F1> <nop>
 nnoremap Q <nop>
 
