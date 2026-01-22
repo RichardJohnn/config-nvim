@@ -58,6 +58,9 @@ set showcmd
 set nobackup
 set noswapfile
 
+set autoread
+au CursorHold,CursorHoldI,FocusGained,BufEnter * checktime
+
 set autoindent
 set smartindent
 set tabstop=2
