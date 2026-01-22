@@ -103,11 +103,11 @@ nmap <CR> o<Esc>
 " insert space from normal mode
 nmap <space> a<space><Esc>h
 
-" console.log the Word under your cursor above
-nnoremap <Leader>k  "zyiwOconsole.log("<C-r>z", <C-r>z);<Esc>
+" log the Word under your cursor above
+nnoremap <Leader>k  "zyiwOIO.inspect(<C-r>z, label: "<C-r>z")<Esc>
 " below
-nnoremap K "zyiwoconsole.log("<C-r>z", <C-r>z);<Esc>
-map K "zyoconsole.log("<C-r>z", <C-r>z);<Esc>
+nnoremap K "zyiwoIO.inspect(<C-r>z, label: "<C-r>z")<Esc>
+map K "zyoIO.inspect(<C-r>z, label: "<C-r>z")<Esc>
 
 " close file but keep buffer open
 nnoremap <Leader>q :bp\|bd #<CR>
