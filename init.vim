@@ -272,6 +272,19 @@ cmap w!! w !sudo tee > /dev/null %
 runtime macros/matchit.vim
 
 lua << EOF
+-- OSC 52 clipboard support (works over SSH/tmux)
+vim.g.clipboard = {
+  name = 'OSC 52',
+  copy = {
+    ['+'] = require('vim.ui.clipboard.osc52').copy('+'),
+    ['*'] = require('vim.ui.clipboard.osc52').copy('*'),
+  },
+  paste = {
+    ['+'] = require('vim.ui.clipboard.osc52').paste('+'),
+    ['*'] = require('vim.ui.clipboard.osc52').paste('*'),
+  },
+}
+
 require('remote-sshfs').setup({
   -- Configuration options here
   -- or leave empty for defaults
