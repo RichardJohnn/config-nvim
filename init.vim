@@ -1,6 +1,6 @@
 call plug#begin('~/.vim/plugged')
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'elixir-editors/vim-elixir'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'preservim/nerdcommenter'
@@ -18,7 +18,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+" Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -38,8 +38,8 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nosduco/remote-sshfs.nvim'
 
-Plug 'github/copilot.vim'
-Plug 'CopilotC-Nvim/CopilotChat.nvim'
+" Plug 'github/copilot.vim'
+" Plug 'CopilotC-Nvim/CopilotChat.nvim'
 " let g:copilot_node_command = "/Users/richardkubina/.asdf/shims/node"
 
 call plug#end()
@@ -136,19 +136,19 @@ nmap     <leader>f <Plug>CtrlSFPrompt
 " nnoremap <leader>C :ChatGPTEditWithInstructions<CR>
 
 " Show autocomplete
-inoremap <silent><expr> <C-Space> coc#refresh()
+" inoremap <silent><expr> <C-Space> coc#refresh()
 
 " Go to definition
-nmap gd <Plug>(coc-definition)
+" nmap gd <Plug>(coc-definition)
 
 " Show hover info
-nmap K :call CocActionAsync('doHover')<CR>
+" nmap K :call CocActionAsync('doHover')<CR>
 
 " Rename variable
-nmap <leader>rn <Plug>(coc-rename)
+" nmap <leader>rn <Plug>(coc-rename)
 
 " Auto-import suggestions
-nmap <leader>i <Plug>(coc-codeaction)
+" nmap <leader>i <Plug>(coc-codeaction)
 
 let g:ctrlsf_auto_focus = {
     \ "at": "start"
@@ -264,7 +264,7 @@ let g:ale_echo_msg_format = '%linter% says %s'
 cmap w!! w !sudo tee > /dev/null %
 
 " lua require('chatgpt').setup()
-lua require'nvim-treesitter.configs'.setup{highlight={enable=true}}  
+" lua require'nvim-treesitter.configs'.setup{highlight={enable=true}}  
 
 runtime macros/matchit.vim
 
