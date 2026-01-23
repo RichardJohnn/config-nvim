@@ -288,20 +288,18 @@ require('remote-sshfs').setup({
   -- or leave empty for defaults
 })
 
-vim.g.copilot_no_tab_map = true
-vim.keymap.set('i', '<S-Tab>', 'copilot#Accept("\\<S-Tab>")', { expr = true, replace_keycodes = false })
-
-require("CopilotChat").setup()
-
--- Quick chat keybinding
-vim.keymap.set('n', '<leader>ccq', function()
-  local input = vim.fn.input("Quick Chat: ")
-  if input ~= "" then
-    require("CopilotChat").ask(input, {
-      selection = require("CopilotChat.select").buffer
-    })
-  end
-end, { desc = "CopilotChat - Quick chat" })
+-- Copilot (uncomment if you install github/copilot.vim and CopilotC-Nvim/CopilotChat.nvim)
+-- vim.g.copilot_no_tab_map = true
+-- vim.keymap.set('i', '<S-Tab>', 'copilot#Accept("\\<S-Tab>")', { expr = true, replace_keycodes = false })
+-- require("CopilotChat").setup()
+-- vim.keymap.set('n', '<leader>ccq', function()
+--   local input = vim.fn.input("Quick Chat: ")
+--   if input ~= "" then
+--     require("CopilotChat").ask(input, {
+--       selection = require("CopilotChat.select").buffer
+--     })
+--   end
+-- end, { desc = "CopilotChat - Quick chat" })
 EOF
 
 set stl+=%{ConflictedVersion()}
