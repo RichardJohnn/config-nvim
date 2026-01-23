@@ -74,8 +74,6 @@ set nofoldenable
 "set foldlevelstart=10
 set foldnestmax=10
 
-verbose set foldmarker?
-
 "ctrl-p
 let g:ctrlp_max_files=0
 let g:ctrlp_max_depth=999
