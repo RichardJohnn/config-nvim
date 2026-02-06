@@ -18,7 +18,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+" Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -261,7 +261,7 @@ let g:ale_echo_msg_format = '%linter% says %s'
 cmap w!! w !sudo tee > /dev/null %
 
 " lua require('chatgpt').setup()
-lua require'nvim-treesitter.configs'.setup{highlight={enable=true}}  
+" lua require'nvim-treesitter.configs'.setup{highlight={enable=true}}  
 
 runtime macros/matchit.vim
 
