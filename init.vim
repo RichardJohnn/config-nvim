@@ -286,3 +286,5 @@ vim.keymap.set('n', '<leader>ccq', function()
   end
 end, { desc = "CopilotChat - Quick chat" })
 EOF
+
+set stl+=%{ConflictedVersion()}
