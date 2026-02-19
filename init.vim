@@ -38,13 +38,8 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nosduco/remote-sshfs.nvim'
 
-Plug 'github/copilot.vim'
-Plug 'CopilotC-Nvim/CopilotChat.nvim'
-" let g:copilot_node_command = "/Users/richardkubina/.asdf/shims/node"
 
 call plug#end()
-
-let g:copilot_npx = v:true
 
 set mouse=r
 
@@ -71,7 +66,7 @@ set nofoldenable
 "set foldlevelstart=10
 set foldnestmax=10
 
-verbose set foldmarker?
+" verbose set foldmarker?
 
 "ctrl-p
 let g:ctrlp_max_files=0
@@ -274,20 +269,6 @@ require('remote-sshfs').setup({
   -- or leave empty for defaults
 })
 
-vim.g.copilot_no_tab_map = true
-vim.keymap.set('i', '<S-Tab>', 'copilot#Accept("\\<S-Tab>")', { expr = true, replace_keycodes = false })
-
-require("CopilotChat").setup()
-
--- Quick chat keybinding
-vim.keymap.set('n', '<leader>ccq', function()
-  local input = vim.fn.input("Quick Chat: ")
-  if input ~= "" then
-    require("CopilotChat").ask(input, {
-      selection = require("CopilotChat.select").buffer
-    })
-  end
-end, { desc = "CopilotChat - Quick chat" })
 EOF
 
 set stl+=%{ConflictedVersion()}
